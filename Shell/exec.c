@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 {
 	char *newArgv[] = { NULL, "hey", "there", "welcome", NULL };
 	char *newEnvironment[] = { NULL };
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: %s <file>\n", argv[0]);
@@ -23,6 +24,6 @@ int main(int argc, char *argv[])
 
 	execve(argv[1], newArgv, newEnvironment);
 	perror("execve");
-	exit (EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }
 
